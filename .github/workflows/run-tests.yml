@@ -1,9 +1,10 @@
-name: Run Tests on Push to session-1 and Pull Request to main
+name: CI/CD Pipeline
 
 on:
   push:
     branches:
       - session-1
+      - session-2
   pull_request:
     branches:
       - main
@@ -19,7 +20,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'  # Specify the Python version you want to use
+          python-version: '3.11'  
 
       - name: Install dependencies
         run: |
